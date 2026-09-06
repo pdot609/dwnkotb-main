@@ -1,0 +1,16 @@
+{
+  "name": "Danny Wood",
+  "short_name": "Danny Wood",
+  "description": "Official site for Danny Wood of New Kids On The Block — events, Remember Betty, and contact.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#B91C1C",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
+}

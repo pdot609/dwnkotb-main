@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Contact | Danny Wood</title>
+  <meta name="description" content="Email Danny Wood’s team at contact@dwnkotb.com — press, Remember Betty, and private Meet & Greets from $450.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="canonical" href="https://dwnkotb.com/contact.html">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | Danny Wood">
+  <meta property="og:description" content="Write the team at contact@dwnkotb.com. After any payment, send the receipt there for confirmation.">
+  <meta property="og:image" content="https://dwnkotb.com/og.jpg">
+  <meta property="og:url" content="https://dwnkotb.com/contact.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">DANNY<span>WOOD</span></a>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="donate.html">Remember Betty</a>
+    </nav>
+  </header>
+
+  <section class="page-hero" id="main">
+    <h1>TALK TO THE CAMP</h1>
+    <p>Not a fan line. Write <a href="mailto:contact@dwnkotb.com">contact@dwnkotb.com</a> — the official inbox for Danny’s camp.</p>
+  </section>
+
+  <section class="section section-contact">
+    <div class="container">
+      <p class="section-desc contact-intro">If you’re writing about the remixed Dolby Live run, Remember Betty, or you want time with Danny that isn’t a three-second photo shuffle — start here or email <a href="mailto:contact@dwnkotb.com">contact@dwnkotb.com</a>. Private Meet &amp; Greets start at $450, paid in crypto once the date is locked. After any payment, send the receipt to that same address so the team can confirm it. He doesn’t read this inbox. His team does.</p>
+
+      <div class="pay-methods contact-tabs" role="tablist">
+        <button type="button" class="pay-method active" data-contact="team" role="tab" aria-selected="true">Write the team</button>
+        <button type="button" class="pay-method" data-contact="meet" role="tab" aria-selected="false">Hang with Danny</button>
+      </div>
+
+      <!-- TEAM MESSAGE -->
+      <div class="contact-panel active" data-contact-panel="team">
+        <form class="donate-form contact-form" id="teamForm">
+          <h3>WRITE THE TEAM</h3>
+          <p class="form-intro">Interviews, a guest spot, a Remember Betty night, or something that doesn’t fit a Meet &amp; Greet. Be specific — they get a lot of “just wanted to say hi.”</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="teamName">Full name</label>
+              <input type="text" id="teamName" required placeholder="Jane Doe" autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="teamEmail">Email</label>
+              <input type="email" id="teamEmail" required placeholder="jane@example.com" autocomplete="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="teamTopic">What’s this about?</label>
+            <select id="teamTopic" required>
+              <option value="">Choose a topic</option>
+              <option value="press">Press — The Right Stuff Remixed / NKOTB</option>
+              <option value="booking">Booking Danny (not concert tickets)</option>
+              <option value="betty">Remember Betty — event, partnership, or gift</option>
+              <option value="fan">A note for Danny (they’ll pass what they can)</option>
+              <option value="other">Something that doesn’t fit the list</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="teamMessage">The actual ask</label>
+            <textarea id="teamMessage" rows="5" required placeholder="Deadline, date, what you need from Danny — not “let me know if he’s free.”"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="teamSubmit">Open email to the team</button>
+          <a class="btn btn-outline btn-full contact-direct" href="mailto:contact@dwnkotb.com">Or email contact@dwnkotb.com directly</a>
+          <p class="form-note">This opens your mail app addressed to the official inbox. Send it from there. Concert tickets stay on nkotb.com.</p>
+        </form>
+        <div class="donate-success hidden" id="teamSuccess">
+          <div class="success-icon">&#10003;</div>
+          <h3>FINISH IN YOUR INBOX</h3>
+          <p>Your email app should be open to <a href="mailto:contact@dwnkotb.com">contact@dwnkotb.com</a>. Hit send. If nothing opened, write that address yourself.</p>
+          <button type="button" class="btn btn-outline" data-reset-form="team">Write again</button>
+        </div>
+      </div>
+
+      <!-- PRIVATE MEET & GREET -->
+      <div class="contact-panel" data-contact-panel="meet" id="meet">
+        <form class="donate-form contact-form" id="meetForm">
+          <h3>A REAL HANG</h3>
+          <p class="form-intro">Park MGM during the last Dolby Live nights, or a private date if you’re not in Vegas. Not a hallway cattle line. From $450. Crypto only after the team says yes — don’t send coins until they do.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="meetName">Full name</label>
+              <input type="text" id="meetName" required placeholder="Jane Doe" autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="meetEmail">Email</label>
+              <input type="email" id="meetEmail" required placeholder="jane@example.com" autocomplete="email">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="meetPhone">Phone</label>
+              <input type="tel" id="meetPhone" placeholder="If we need to move the time">
+            </div>
+            <div class="form-group">
+              <label for="meetGuests">Who’s coming</label>
+              <select id="meetGuests" required>
+                <option value="1">Just me — from $450</option>
+                <option value="2">Two of us</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five or more — say who in the notes</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="meetDate">Night you’re hoping for</label>
+              <input type="date" id="meetDate" required>
+            </div>
+            <div class="form-group">
+              <label for="meetWhere">Where you want him</label>
+              <select id="meetWhere" required>
+                <option value="">Pick a setting</option>
+                <option value="vegas-oct3">Park MGM — Oct 3, after the Saturday show</option>
+                <option value="vegas-oct16">Park MGM — Oct 16, closing week</option>
+                <option value="vegas-other">Vegas — another Right Stuff Remixed night</option>
+                <option value="other">Not Vegas — a private date somewhere else</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="meetNotes">What this is for</label>
+            <textarea id="meetNotes" rows="4" placeholder="Anniversary, first NKOTB show, you’re at Dolby Live that night, a wheelchair, kids in the group — anything that changes the room."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="meetSubmit">Email this request</button>
+          <a class="btn btn-outline btn-full contact-direct" href="mailto:contact@dwnkotb.com?subject=Meet%20%26%20Greet%20request">Or email contact@dwnkotb.com directly</a>
+          <p class="form-note">From $450 · BTC, ETH, or USDT after they confirm · this does not buy a concert ticket. When you pay, send the receipt to <a href="mailto:contact@dwnkotb.com">contact@dwnkotb.com</a>.</p>
+        </form>
+        <div class="donate-success hidden" id="meetSuccess">
+          <div class="success-icon">&#10003;</div>
+          <h3>FINISH IN YOUR INBOX</h3>
+          <p>Your email app should be open to <a href="mailto:contact@dwnkotb.com">contact@dwnkotb.com</a>. Send the request. Don’t pay until they write back — then send the receipt to the same address.</p>
+          <button type="button" class="btn btn-outline" data-reset-form="meet">Ask for another night</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="footer-logo">DANNY<span>WOOD</span></a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html">Remember Betty</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Danny Wood. All Rights Reserved.</p>
+      <p class="footer-email"><a href="mailto:contact@dwnkotb.com">contact@dwnkotb.com</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

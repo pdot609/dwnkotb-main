@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Donate | Remember Betty</title>
+  <meta name="description" content="Give to Remember Betty in Elizabeth Wood’s name. Crypto or bank transfer — then email your receipt to contact@dwnkotb.com.">
+  <meta name="theme-color" content="#E91E8C">
+  <link rel="canonical" href="https://dwnkotb.com/payment.html">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Give in Betty’s name | Remember Betty">
+  <meta property="og:description" content="Donate by crypto or bank. Send the receipt to contact@dwnkotb.com for confirmation.">
+  <meta property="og:image" content="https://dwnkotb.com/og.jpg">
+  <meta property="og:url" content="https://dwnkotb.com/payment.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-betty page-payment">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">DANNY<span>WOOD</span></a>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html" class="active">Remember Betty</a>
+    </nav>
+  </header>
+
+  <section class="payment-hero" id="main">
+    <div class="payment-bg" aria-hidden="true">
+      <div class="payment-bg-img" style="background-image:url('ngo/paint-twist.webp')"></div>
+      <div class="payment-bg-img" style="background-image:url('ngo/community.webp')"></div>
+      <div class="payment-bg-img" style="background-image:url('ngo/volunteers.webp')"></div>
+      <div class="payment-bg-img" style="background-image:url('ngo/kinecta.webp')"></div>
+    </div>
+    <div class="payment-overlay"></div>
+
+    <div class="payment-panel">
+      <p class="payment-eyebrow">In memory of Elizabeth “Betty” Wood</p>
+      <h1>GIVE IN HER NAME</h1>
+      <p class="payment-lead">Betty didn’t get to see what her son built. The bills still come for families in treatment — rent, groceries, a ride to chemo. That’s the work now.</p>
+
+      <form id="donateForm" class="payment-form">
+        <!-- Amount -->
+        <div class="amount-group">
+          <button type="button" class="amount-btn" data-amount="25">$25</button>
+          <button type="button" class="amount-btn" data-amount="50">$50</button>
+          <button type="button" class="amount-btn active" data-amount="100">$100</button>
+          <button type="button" class="amount-btn" data-amount="250">$250</button>
+          <button type="button" class="amount-btn" data-amount="500">$500</button>
+          <button type="button" class="amount-btn" data-amount="custom">Other</button>
+        </div>
+        <div class="custom-amount hidden" id="customAmountWrap">
+          <label for="customAmount">Enter amount ($)</label>
+          <input type="number" id="customAmount" min="1" placeholder="Enter amount">
+        </div>
+
+        <div class="form-group">
+          <label for="donorName">Full Name</label>
+          <input type="text" id="donorName" required placeholder="Jane Doe">
+        </div>
+        <div class="form-group">
+          <label for="donorEmail">Email</label>
+          <input type="email" id="donorEmail" required placeholder="jane@example.com">
+        </div>
+
+        <!-- Payment method tabs -->
+        <p class="method-label">Payment method</p>
+        <div class="pay-methods" role="tablist">
+          <button type="button" class="pay-method active" data-method="crypto" role="tab" aria-selected="true">Crypto</button>
+          <button type="button" class="pay-method" data-method="bank" role="tab" aria-selected="false">Bank Transfer</button>
+        </div>
+
+        <!-- CRYPTO: BTC / ETH / USDT -->
+        <div class="pay-panel active" id="panel-crypto" data-panel="crypto">
+          <p class="pay-hint">Send BTC, ETH, or USDT (ERC-20) to Remember Betty. Scan the code or copy the address, then paste the transaction ID so we can match your gift.</p>
+          <div class="coin-methods" role="tablist" aria-label="Cryptocurrency">
+            <button type="button" class="coin-btn active" data-coin="btc" aria-selected="true">BTC</button>
+            <button type="button" class="coin-btn" data-coin="eth" aria-selected="false">ETH</button>
+            <button type="button" class="coin-btn" data-coin="usdt" aria-selected="false">USDT</button>
+          </div>
+          <div class="crypto-wallet">
+            <div class="crypto-qr" id="cryptoQr" role="img" aria-label="QR code for BTC wallet"></div>
+            <div class="crypto-wallet-meta">
+              <span class="crypto-label" id="cryptoLabel">BTC Wallet</span>
+              <p class="crypto-scan">Scan with your wallet app</p>
+              <code id="cryptoAddress">bc1qrjgh4ypfrv0hma5ff82guwn96ugwnpvcuqz66x</code>
+              <p class="crypto-network hidden" id="cryptoNetwork">Send USDT on Ethereum (ERC-20) only.</p>
+              <button type="button" class="btn btn-outline btn-sm copy-btn" data-copy="cryptoAddress">Copy</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cryptoTx">Transaction ID</label>
+            <input type="text" id="cryptoTx" placeholder="Paste your TX ID">
+          </div>
+        </div>
+
+        <!-- BANK TRANSFER -->
+        <div class="pay-panel" id="panel-bank" data-panel="bank">
+          <p class="pay-hint">Wire to City National in the foundation’s name. Put your name in the memo so we know who stood with Betty.</p>
+          <div class="bank-details">
+            <div class="bank-row">
+              <span class="bank-label">Account name</span>
+              <span id="bankName">Remember Betty Foundation</span>
+            </div>
+            <div class="bank-row">
+              <span class="bank-label">Bank</span>
+              <span id="bankBank">City National Bank</span>
+            </div>
+            <div class="bank-row">
+              <span class="bank-label">Account number</span>
+              <code id="bankAccount">9012143526</code>
+            </div>
+            <div class="bank-row">
+              <span class="bank-label">Routing number</span>
+              <code id="bankRouting">051904524</code>
+            </div>
+            <button type="button" class="btn btn-outline btn-sm copy-btn" id="copyBank" data-copy="bank">Copy details</button>
+          </div>
+          <div class="form-group">
+            <label for="bankRef">Transfer reference</label>
+            <input type="text" id="bankRef" placeholder="Your name or confirmation number">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full" id="payBtn">DONATE $100</button>
+        <p class="form-note">Remember Betty is Danny’s 501(c)(3) for his mother — gifts go to patients and survivors, not a national umbrella charity.</p>
+        <p class="receipt-note">After you pay, send your receipt or transaction proof to <a href="mailto:contact@dwnkotb.com">contact@dwnkotb.com</a> so the team can confirm it. That’s the official email.</p>
+        <a href="donate.html" class="back-link">← Back to Remember Betty</a>
+      </form>
+
+      <div class="donate-success hidden" id="donateSuccess">
+        <div class="success-icon">&#10003;</div>
+        <h3>SHE’D BE PROUD</h3>
+        <p>Your mail app should be open to <a href="mailto:contact@dwnkotb.com">contact@dwnkotb.com</a>. Send that message and attach the receipt so the team can confirm the gift.</p>
+        <a href="donate.html" class="btn btn-outline">Return to Remember Betty</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="qrcode.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
